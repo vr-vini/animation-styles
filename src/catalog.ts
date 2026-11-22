@@ -21,6 +21,7 @@ import { Microscope } from "./styles/screens/microscope";
 import { PixelRPG } from "./styles/screens/pixel";
 import { PaperPopUp, RedPapercut, ShadowPuppet } from "./styles/toon-and-paper/paper";
 import { CelAnime80s, FlatVector, StickFigure } from "./styles/toon-and-paper/toon";
+import { ChalkPastel, Comic, Constellation, GoldDots, GoldLine, Mosaic, NeedleFelt, OilPaint, Origami, Sakuga } from "./styles/light-and-texture/light-and-texture";
 
 export type Family =
   | "Drawn on a board"
@@ -32,7 +33,8 @@ export type Family =
   | "3D look"
   | "Cinema eras"
   | "Screens and science"
-  | "Abstract";
+  | "Abstract"
+  | "Light and texture";
 
 export type Style = {
   nn: string; // the style's number (kept from the original board of 92, so there are gaps)
@@ -98,4 +100,14 @@ export const STYLES: Style[] = [
 
   s("87", "liquid-motion", "Liquid motion", "Abstract", "Smooth, bouncy, glossy shapes that stretch and settle like liquid.", "", "print-and-abstract/abstract.tsx", LiquidMotion),
   s("89", "generative-abstract", "Generative abstract", "Abstract", "Thousands of tiny strokes in a flow field that form the kettle, pour and cup.", "", "print-and-abstract/abstract.tsx", Generative),
+  s("90", "needle-felt", "Needle felt", "Light and texture", "Wool shapes on a felt board: fuzzy edges, fibres and puffy light, stepped like stop-motion.", "", "light-and-texture/light-and-texture.tsx", NeedleFelt),
+  s("91", "origami", "Origami", "Light and texture", "Folded paper: every shape split into lit facets with crease lines, on kraft paper.", "", "light-and-texture/light-and-texture.tsx", Origami),
+  s("92", "gold-dots", "Gold dots", "Light and texture", "Points of light on navy: the outlines become twinkling gold dots and the cup fills dot by dot.", "", "light-and-texture/light-and-texture.tsx", GoldDots),
+  s("93", "gold-line", "Gold line", "Light and texture", "One glowing gold line draws every outline on navy; the chai fills with gold hatching.", "", "light-and-texture/light-and-texture.tsx", GoldLine),
+  s("94", "constellation", "Constellation", "Light and texture", "Stars sit on the outlines and join up one by one; the chai is a cluster of small stars.", "", "light-and-texture/light-and-texture.tsx", Constellation),
+  s("95", "mosaic", "Mosaic", "Light and texture", "Small stone and glass tiles with grout on a gold-leaf ground.", "", "light-and-texture/light-and-texture.tsx", Mosaic),
+  s("96", "comic", "Comic", "Light and texture", "A comic panel: thick ink, flat colour, halftone shadows, speed lines and a sound-word burst.", "sound word: GLUG!", "light-and-texture/light-and-texture.tsx", Comic),
+  s("97", "sakuga", "Sakuga", "Light and texture", "Anime effects animation: smear, a 3-frame impact frame, speed lines, a ring burst and shrinking sparkles.", "", "light-and-texture/light-and-texture.tsx", Sakuga),
+  s("98", "oil-paint", "Oil paint", "Light and texture", "Thick brush strokes re-laid every few frames like paint on glass, with canvas impasto light.", "", "light-and-texture/light-and-texture.tsx", OilPaint),
+  s("99", "chalk-pastel", "Chalk pastel", "Light and texture", "Soft pastel on dark blue paper: grainy strokes, hatched fills and smudged steam.", "", "light-and-texture/light-and-texture.tsx", ChalkPastel),
 ];
