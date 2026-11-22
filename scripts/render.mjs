@@ -49,7 +49,8 @@ const find = (q) => {
 };
 
 const run = (cmdArgs) => {
-  const r = spawnSync(bin, cmdArgs, { cwd: root, stdio: "inherit", shell: process.platform === "win32" });
+  // with shell on Windows the path must be quoted, or a folder with spaces breaks it
+  const r = spawnSync(process.platform === "win32" ? `"${bin}"` : bin, cmdArgs, { cwd: root, stdio: "inherit", shell: process.platform === "win32" });
   if (r.status !== 0) { console.error(`\nRender failed (exit ${r.status}). See the error above.`); process.exit(r.status ?? 1); }
 };
 
